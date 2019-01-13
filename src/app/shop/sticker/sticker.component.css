@@ -1,0 +1,10 @@
+.image {
+    height: 144px;
+    width: 216px; 
+    background-color:lightslategray;
+}
+
+.bar {
+    background-color: rgb(197, 197, 197);
+    height: 40px; width: 216px;
+}
