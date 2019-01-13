@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { WalletService } from 'src/app/wallet.service';
 
 @Component({
   selector: 'app-sticker',
   templateUrl: './sticker.component.html',
   styleUrls: ['./sticker.component.css']
 })
-export class StickerComponent implements OnInit {
+export class StickerComponent {
+  price = 3;
+  constructor(private wallet: WalletService) {}
 
-  constructor() { }
-
-  ngOnInit() {
+  onPurchase() {
+    if(confirm("Czy na pewno chesz kupić ten obrazek?")){
+      this.wallet.decrease(this.price);
+      window.open('../../assets/cat.jpg');
+    }
   }
-
 }
