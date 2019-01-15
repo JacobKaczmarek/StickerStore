@@ -6,12 +6,6 @@ import { WalletService } from '../wallet.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
-  avialableMoney;
-  constructor(private wallet: WalletService) {}
-
-  ngOnInit() {
-    this.avialableMoney = this.wallet.getWalletamount();
-  }
-
+export class HeaderComponent {
+  constructor(public wallet: WalletService) {}
 }

@@ -1,6 +1,6 @@
 <div style="margin: 25px">
-  <div style="align-content: center">Nazwa</div>
-  <div class="image"><img src="../../../assets/cat.jpg" alt="zdjecie" style="width: 216px; height: 144;"></div>
+  <div style="align-content: center">{{ picture.name }}</div>
+  <div class="image"><img src="../../../assets/kotel.jpg" alt="zdjecie" style="width: 216px; height: 144;"></div>
   <div class="bar"><div (click)="onPurchase()" class="mini ui button" style="margin: 5px">Kup</div></div>
-  <div style="margin: -30px 20px; float: left;">{{price}}zł</div>
+  <div style="margin: -30px 20px; float: left;">{{picture.price}}zł</div>
 </div>

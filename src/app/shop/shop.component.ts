@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../database.service';
+import { defineBase } from '@angular/core/src/render3';
+import { Picture } from './picture.model';
 
 @Component({
   selector: 'app-shop',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
-  stickers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  constructor() { }
+  pictures: Picture[];
+  constructor(private db: DatabaseService) { }
 
   ngOnInit() {
+    this.db.getPicturesList().subscribe((data) => {
+      this.pictures = data;
+    });
   }
 
 }
