@@ -9,6 +9,7 @@ import { Picture } from '../picture.model';
 })
 export class StickerComponent {
   @Input() picture: Picture;
+  purchased = false;
   constructor(private wallet: WalletService) { }
 
   onPurchase() {
@@ -17,8 +18,13 @@ export class StickerComponent {
     } else {
       if (confirm("Czy na pewno chesz kupić ten obrazek?")) {
         this.wallet.decrease(this.picture.price);
+        this.purchased = true;
         window.open("../../../assets/bigCat.jpg");
       }
     }
+  }
+
+  onDownload() {
+    window.open("../../../assets/bigCat.jpg");
   }
 }

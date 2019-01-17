@@ -1,6 +1,7 @@
 .wallet {
+    color: white;
     float: right;
     padding: 4px;
-    background-color: rgb(255, 195, 11);
+    background-color: rgb(196, 154, 51);
     border-radius: 3px;
 }
