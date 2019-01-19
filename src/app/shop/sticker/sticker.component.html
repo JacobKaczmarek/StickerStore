@@ -1,6 +1,6 @@
 <div style="margin: 25px">
   <div style="align-content: center" style="margin: 5px"><b>{{ picture.name }}</b></div>
-  <div class="image"><img src="../../../assets/kotel.jpg" alt="zdjecie" style="width: 216px; height: 144;"></div>
-  <div class="bar"><button (click)="onDownload()" [disabled]="!purchased" class="mini ui blue button" style="margin: 5px; float: right;">Pobierz</button><button (click)="onPurchase()" [disabled]="purchased" class="mini ui blue button" style="margin: 5px; float: right">Kup</button></div>
+  <div class="image"><img [src]="picture.smallPicture" alt="zdjecie" style="width: 216px; height: 144;"></div>
+  <div class="bar"><button (click)="onDownload()" [disabled]="!picture.purchased" class="mini ui blue button" style="margin: 5px; float: right;">Pobierz</button><button (click)="onPurchase()" [disabled]="picture.purchased" class="mini ui blue button" style="margin: 5px; float: right">Kup</button></div>
   <div style="margin: -30px 25px; float: left;">{{picture.price}}zł</div>
 </div>

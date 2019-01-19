@@ -3,4 +3,5 @@ export class Picture {
     smallPicture: string;
     bigPicture: string;
     price: number;
+    purchased = false;
 }
