@@ -18,8 +18,6 @@ export class StickerComponent {
       if (confirm("Czy na pewno chesz kupić ten obrazek?")) {
         this.wallet.decrease(this.picture.price);
         this.picture.purchased = true;
-        console.log(this.picture.bigPicture);
-        window.open(this.picture.bigPicture);
       }
     }
   }
