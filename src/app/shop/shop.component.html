@@ -1,5 +1,5 @@
 <div class="ui centered grid main">
   <div class="ui small input" style="margin-top: 10px;"><input [(ngModel)]="searchPhrase" (input)="searchPhraseChanged()" type="text" placeholder=""></div>  
-  <div class="eight columncentered row"><app-sticker (window:resize)="adjustPage()" *ngFor="let picture of filteredPictures | paginate: { itemsPerPage: filteredPictures, currentPage: p }" [picture]="picture"></app-sticker></div>
+  <div class="eight columncentered row"><app-sticker (window:resize)="adjustPage()" *ngFor="let picture of filteredPictures | paginate: { itemsPerPage: picturesPerPage, currentPage: p }" [picture]="picture"></app-sticker></div>
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
