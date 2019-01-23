@@ -10,12 +10,20 @@ import { Picture } from './picture.model';
 })
 export class ShopComponent implements OnInit {
   pictures: Picture[];
+  picturesPerPage;
+  picturePanelSize = 258;
   constructor(private db: DatabaseService) { }
 
   ngOnInit() {
     this.db.getPicturesList().subscribe((data) => {
       this.pictures = data;
     });
-  }
 
+    this.picturesPerPage = Math.floor(window.innerWidth/this.picturePanelSize) * 2;
+
+  }
+  adjustPage() {
+    this.picturesPerPage = Math.floor(window.innerWidth/this.picturePanelSize) * 2;
+    console.log(this.picturesPerPage);
+  }
 }
