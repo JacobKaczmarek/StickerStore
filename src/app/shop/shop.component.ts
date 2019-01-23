@@ -31,7 +31,7 @@ export class ShopComponent implements OnInit {
   searchPhraseChanged() {
     this.filteredPictures = [];
     for(let picture of this.pictures) {
-      if(picture.name.includes(this.searchPhrase)) {
+      if(picture.name.toUpperCase().includes(this.searchPhrase.toUpperCase())) {
         this.filteredPictures.push(picture);
       }
     }
