@@ -11,7 +11,7 @@ export class ShopComponent implements OnInit {
   pictures: Picture[];
   filteredPictures: Picture[];
   picturesPerPage;
-  picturePanelSize = 260;
+  picturePanelSize = 266;
   searchPhrase = '';
   constructor(private db: DatabaseService) { }
 
